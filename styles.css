@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: rgb(47, 46, 46);
+  --wrapper-bg-color: white;
+  --font: "Kaushan Script", sans-serif;
+  --btn-color: rgb(235, 231, 3);
+}
+
+body {
+  background-color: var(--body-bg-color);
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--font);
+}
+
+.wrapper {
+  width: 600px;
+  height: 340px;
+  background-color: var(--wrapper-bg-color);
+  margin: 35vw auto;
+  border-radius: 10px;
+  border: none;
+}
+
+.input {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 40px;
+}
+
+.txtlabel {
+  font-size: 1.3rem;
+  text-shadow: -1px 1px 1px black;
+}
+
+.text-input {
+  width: 45%;
+  text-align: center;
+}
+
+.text-input,
+.btn {
+  font-family: var(--font);
+}
+
+.qrimg {
+  border: 2px solid black;
+  width: 150px;
+  height: 150px;
+  display: none;
+  transition: display 0.5s ease;
+}
+
+.btn {
+  width: 100px;
+  height: 35px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: var(--btn-color);
+  color: rgb(124, 67, 67);
+  text-align: center;
+  text-shadow: 1px 0.5px 0.5px black;
+  box-shadow: -1px 1.5px 1px black;
+}
+
+.error-txt {
+  color: red;
+  display: none;
+}
