@@ -21,12 +21,16 @@ body {
 }
 
 .wrapper {
-  width: 600px;
-  height: 340px;
+  width: 90vw;
+  max-width: 600px;
+  min-width: 260px;
+  height: auto;
+  min-height: 340px;
   background-color: var(--wrapper-bg-color);
-  margin: 35vw auto;
+  margin: 8vw auto;
   border-radius: 10px;
   border: none;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
 }
 
 .input {
@@ -35,7 +39,9 @@ body {
   align-items: center;
   justify-content: flex-start;
   gap: 15px;
-  padding: 40px;
+  padding: 8vw 5vw;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .txtlabel {
@@ -44,8 +50,12 @@ body {
 }
 
 .text-input {
-  width: 45%;
+  width: 100%;
+  max-width: 350px;
+  min-width: 120px;
   text-align: center;
+  padding: 0.5em;
+  font-size: 1rem;
 }
 
 .text-input,
@@ -55,16 +65,21 @@ body {
 
 .qrimg {
   border: 2px solid black;
-  width: 150px;
-  height: 150px;
+  width: 40vw;
+  max-width: 150px;
+  min-width: 90px;
+  height: auto;
+  aspect-ratio: 1/1;
   display: none;
-  transition: display 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .btn {
-  width: 100px;
+  width: 60vw;
+  max-width: 120px;
+  min-width: 80px;
   height: 35px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   border-radius: 10px;
   background-color: var(--btn-color);
@@ -72,9 +87,52 @@ body {
   text-align: center;
   text-shadow: 1px 0.5px 0.5px black;
   box-shadow: -1px 1.5px 1px black;
+  margin-top: 10px;
 }
 
 .error-txt {
   color: red;
   display: none;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 98vw;
+    min-width: unset;
+    margin: 5vw auto;
+    padding: 0;
+  }
+  .input {
+    padding: 6vw 2vw;
+  }
+  .qrimg {
+    width: 60vw;
+    max-width: 200px;
+    min-width: 70px;
+  }
+  .btn {
+    width: 80vw;
+    max-width: 150px;
+    min-width: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .input {
+    padding: 4vw 1vw;
+  }
+  .qrimg {
+    width: 80vw;
+    min-width: 50px;
+  }
+  .btn {
+    width: 90vw;
+    min-width: 40px;
+  }
 }
